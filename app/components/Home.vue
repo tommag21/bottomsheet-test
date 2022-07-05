@@ -8,7 +8,7 @@
       iosOverflowSafeAreaEnabled="false"
       stepIndex="0"
       :steps="[200, 500]"
-      scrollViewId="listview"
+      scrollViewId="scrollView"
     >
       <GridLayout>
         <Button class="-primary" text="Go to second page" @tap="goToPage" />
@@ -19,7 +19,7 @@
           <Label class="text-center" text="Step 1" />
         </GridLayout>
 
-        <!-- <ScrollView row="1" id="scrollView">
+        <ScrollView row="1" id="scrollView">
           <StackLayout>
             <Label
               v-for="(item, i) in items"
@@ -28,12 +28,12 @@
               :text="'Item ' + item"
             />
           </StackLayout>
-        </ScrollView> -->
+        </ScrollView>
 
-        <RadListView
+        <!-- <RadListView
           row="1"
           for="item in items"
-          id="listView"
+          id="scrollView"
           @itemTap="onItemTap"
         >
           <v-template>
@@ -41,7 +41,7 @@
               <Label :text="'Item ' + item" />
             </GridLayout>
           </v-template>
-        </RadListView>
+        </RadListView> -->
       </GridLayout>
     </BottomSheet>
   </Page>
